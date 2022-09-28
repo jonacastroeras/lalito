@@ -23,7 +23,7 @@
 </body>
 
 <script>
-    function animateLalin() {
+    async function animateLalin() {
         document.getElementById("click").setAttribute("hidden", "hidden")
         document.getElementById("frase1").removeAttribute("hidden")
         document.getElementById("frase1").classList.add("animate__fadeIn")
@@ -37,11 +37,12 @@
         setTimeout(() => {
             document.getElementById("frase1").setAttribute("hidden", "hidden")
             document.getElementById("frase2").removeAttribute("hidden")
-        }, 2500)
-        setTimeout(() => {
-            document.getElementById("frase2").setAttribute("hidden", "hidden")
-            document.getElementById("frase3").removeAttribute("hidden")
-        }, 3500)
+            setTimeout(() => {
+                document.getElementById("frase2").setAttribute("hidden", "hidden")
+                document.getElementById("frase3").removeAttribute("hidden")
+            }, 3500)
+        }, 3000)
+
 
 
     }

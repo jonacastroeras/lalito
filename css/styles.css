@@ -1,6 +1,6 @@
 body{
+    margin: 0 auto;
     font-family: Arial;
-    margin-top: 10%;
     background-color: #270073;
     background-image: url('../images/planetas.png');
     background-size: 40vh;
