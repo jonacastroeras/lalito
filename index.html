@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumple</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <img id="img" src="./images/astronautasn.png" class="animate__animated animate__backInDown" alt="">
+        <h1>
+            <span id="frase1" class="animate__animated" hidden>Al infinito y más allá</span>
+            <span id="frase2" hidden>Feliz cumple<strong> Lalitooo</strong></span>
+            <span id="frase3" hidden>🥳🥳🥳🥳🥳</span>
+            <a id="click" href="javascript:void(0)" onclick="animateLalin()">Presiona 🚀</a>
+        </h1>
+    </div>
+</body>
+
+<script>
+    function animateLalin() {
+        document.getElementById("click").setAttribute("hidden", "hidden")
+        document.getElementById("frase1").removeAttribute("hidden")
+        document.getElementById("frase1").classList.add("animate__fadeIn")
+        document.getElementsByTagName("body")[0].style["background-image"] = "url('../images/planetas.gif')"
+        document.getElementById("img").classList.remove("animate__backInDown")
+        document.getElementById("img").setAttribute("src", "./images/astronauta.png")
+        document.getElementById("img").classList.add("animate__bounce")
+        document.getElementById("img").classList.add("animate__infinite")
+        document.getElementById("img").classList.add("infinite")
+
+        setTimeout(() => {
+            document.getElementById("frase1").setAttribute("hidden", "hidden")
+            document.getElementById("frase2").removeAttribute("hidden")
+        }, 2500)
+        setTimeout(() => {
+            document.getElementById("frase2").setAttribute("hidden", "hidden")
+            document.getElementById("frase3").removeAttribute("hidden")
+        }, 3500)
+
+
+    }
+</script>
+
+</html>
